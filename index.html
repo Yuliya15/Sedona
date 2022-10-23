@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/style.css">
   </head>
   <body>
+    <!--хедер-->
     <header class="page-header">
       <nav class="navigation">
         <a class="logo">
@@ -45,26 +46,32 @@
         </ul>
       </nav>
     </header>
+
+    <!--main-->
     <main class="main-container">
       <div class="wrapper">
         <h1 class="visually-hidden">Седона</h1>
         <img class="welcome-title" src="./image/welcome.svg" width="458" height="352" alt="Добро пожаловать в Седону">
       </div>
+
+      <!--О Седоне-->
       <section class="about-us" id="about-Sedona">
         <h2 class="visually-hidden">О Седоне</h2>
         <p class="about-us-title">Седона — небольшой городок в Аризоне,
           заслуживающий большего!</p>
         <p class="about-us-description">Рассмотрим 5 причин, по которым Седона круче, чем Гранд-Каньон!</p>
+
+        <!--Причины-->
         <section class="reasons">
           <ol class="reason-list">
             <li class="reason-item">
               <div class="reason-1 reason-container">
                 <h3 class="reason-title">Настоящий городок</h3>
-                <span>№1</span>
-                <p>Седона — не аттракцион для туристов, там течёт
+                <span class="number-reason">№1</span>
+                <p class="reason-description">Седона — не аттракцион для туристов, там течёт
                   своя жизнь</p>
+              </div>
               <img src="./image/Sedona-city.jpg" width="800" height="384" alt="Архитектура Седоны">
-            </div>
               <ul class="advantage-list">
                 <li class="advantage-item house">
                   <h4 class="reason-title advantage-title">Жильё</h4>
@@ -86,29 +93,31 @@
             <li class="reason-item">
               <div class="reason-2 reason-container">
                 <h3 class="reason-title">Там есть мост дьявола</h3>
-                <span>№2</span>
-                <p>Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-              <img src="./image/bridge.jpg" width="800" height="384" alt="Мост дьявола среди скал и гор">
+                <span class="number-reason">№2</span>
+                <p class="reason-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
             </div>
+            <img src="./image/bridge.jpg" width="800" height="384" alt="Мост дьявола среди скал и гор">
             </li>
-            <li class="reason-item">
-              <h3 class="reason-title">Небольшая площадь</h3>
-              <span>№3</span>
-              <p>Все достопримечательности находятся очень близко</p>
+            <li class="reason-item reason-wrapper">
+                <h3 class="reason-title">Небольшая площадь</h3>
+                <span class="number-reason">№3</span>
+                <p class="reason-description">Все достопримечательности находятся очень близко</p>
             </li>
-            <li class="reason-item">
-              <h3 class="reason-title">Красивая дорога</h3>
-              <span>№4</span>
-              <p>Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+            <li class="reason-item reason-wrapper">
+                <h3 class="reason-title">Красивая <br> дорога</h3>
+                <span class="number-reason">№4</span>
+                <p class="reason-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
-            <li class="reason-item">
-              <h3 class="reason-title">Мало туристов</h3>
-              <span>№5</span>
-              <p>Большинство едет в Гранд Каньон и толпится там</p>
+            <li class="reason-item reason-wrapper">
+                <h3 class="reason-title">Мало <br> туристов</h3>
+                <span class="number-reason">№5</span>
+                <p class="reason-description">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
           </ol>
         </section>
       </section>
+
+      <!--Поиск-->
       <section class="search">
         <h2 class="visually-hidden">Поиск гостиниц</h2>
         <p class="search-title">Заинтересовались?</p>
@@ -117,6 +126,8 @@
         </p>
          <a class="button" href="#">Поиск гостиницы в Седоне</a>
       </section>
+
+      <!--Подписка-->
       <section class="subscribe">
         <div class="subscribe-container">
         <h2 class="subscribe-title">Подпишитесь на рассылку</h2>
@@ -124,14 +135,14 @@
           честное бойскаутское!</p>
         <form class="subscribe-form" action="https://echo.htmlacademy.ru/" method="post">
           <label class="visually-hidden" for="email">Email</label>
-          <input type="email" name="email" placeholder="Ваш e-mail" id="email">
+          <input type="email" name="email" placeholder="Ваш e-mail" id="email" required>
           <button type="submit">Подписаться</button>
         </form>
         </div>
       </section>
     </main>
 
-
+<!--footer-->
     <footer class="page-footer">
       <div class="container-footer">
         <section class="social">
