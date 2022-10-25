@@ -229,9 +229,6 @@ a.button:active {
 }
 
 .reason-item {
-  color: #000000;
-  margin: 0;
-  padding: 0;
   background: rgba(131, 179, 211, 0.12);
 }
 
@@ -239,26 +236,16 @@ a.button:active {
   background: rgba(131, 179, 211, 0.2);
 }
 
-.reason-container {
-  background-color: #83B3D3;
-  padding: 97px 90px 87px;
-  color:#FFFFFF
-}
-
 .reason-item:first-child {
   grid-column: span 3;
   display: grid;
-  grid-template-areas: "r i i"
-                       "a a a";
-  grid-template-columns: repeat(3, 400px);
+  grid-template-columns: 400px 800px;
 }
 
-.reason-1 {
-  grid-area: r;
-}
-
-.reason-item:first-child img {
-  grid-area: i;
+.reason-container {
+  background-color: #83B3D3;
+  padding: 97px 90px 87px;
+  color:#FFFFFF;
 }
 
 .reason-item img {
@@ -275,6 +262,7 @@ a.button:active {
   font-weight: 700;
   text-align: center;
   text-transform: uppercase;
+  color: #000000;
 }
 
 .number-reason {
@@ -291,60 +279,47 @@ a.button:active {
   line-height: 21px;
 }
 
-.reason-item:nth-child(2) {
+.reason-item:nth-child(5) {
   grid-column: span 3;
   display: grid;
-  grid-template-columns: 400px 800px;
+  grid-template-columns: 800px 400px;
+}
+
+.advantage-item {
+  margin: 0;
+  padding: 85px 75px 79px;
+}
+
+.advantage-title {
+  color: #FFFFFF;
+  margin: 0;
+  margin-bottom: 30px;
+  padding: 0;
 }
 
 .reason-wrapper {
   padding: 97px 75px 108px;
 }
 
-/*преимущества*/
-.advantage-list {
-  grid-area: a;
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0;
-  padding: 0;
-}
-
-.advantage-item {
-  width: 400px;
-  margin: 0;
-  padding: 85px 0 79px;
-}
-
-.advantage-item:nth-child(even) {
-  background-color: #FFFFFF;
-}
-
-.advantage-title {
-  margin: 23px 0 20px ;
-  padding: 0;
-}
-
-.advantage-description {
-  width: 250px;
-  margin: 0 auto;
-  font-size: 18px;
-  line-height: 21px;
-}
-
 .house::before {
+  display: block;
+  margin: 0 auto 23px;
   content: url('../image/house.svg');
   width: 75px;
   height: 72px;
 }
 
 .food::before {
+  display: block;
+  margin: 0 auto 23px;
   content: url('../image/food.svg');
   width: 74px;
   height: 70px;
 }
 
 .presents::before {
+  display: block;
+  margin: 0 auto 23px;
   content: url('../image/presents.svg');
   width: 64px;
   height: 76px;
@@ -523,14 +498,15 @@ button[type="submit"] {
 .inner-container {
   background-color: #808080;
   background-image: url('../image/background.jpg');
+  background-size: 100% 100%;
   background-repeat: no-repeat;
-  background-size: 100%;
   padding: 35px 72px 83px;
 }
 
 /*внутренний header*/
 .inner-header {
   color: #FFFFFF;
+  margin-bottom: 45px;
 }
 
 .inner-header-title {
@@ -546,7 +522,6 @@ button[type="submit"] {
 .breadcrumbs-list {
   display: flex;
   margin: 0;
-  margin-bottom: 45px;
   padding: 0;
 }
 
@@ -556,10 +531,7 @@ button[type="submit"] {
 
 .breadcrumbs-item:first-child::after {
   content: url('../image/arrow-right.svg');
-}
-
-.breadcrumbs-item:last-child .breadcrumbs-link {
-  padding-left: 11px;
+  margin-right: 11px;
 }
 
 .breadcrumbs-link {
@@ -573,7 +545,8 @@ button[type="submit"] {
 }
 
 .catalog-filter {
-  display: flex;
+  display: grid;
+  grid-template-columns: 217px 312px 287px 241px;
 }
 
 .filter-group {
@@ -582,15 +555,30 @@ button[type="submit"] {
   margin: 0;
 }
 
+.filter-group:last-child {
+  align-self: end;
+}
+
 .filter-group-title {
+  margin-bottom: 30px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
 }
 
 .filter-group-list {
+  display: flex;
+  flex-direction: column;
   margin: 0;
   padding: 0;
+}
+
+.filter-group-item {
+  margin-bottom: 13px;
+}
+
+.filter-group-item:last-child {
+  margin-bottom: 0;
 }
 
 .control-input {
@@ -604,13 +592,14 @@ button[type="submit"] {
   color: #FFFFFF;;
 }
 
-
 button[type="reset"] {
   border-color: transparent;
   background-color: transparent;
+  color: #FFFFFF;
 }
 
 .catalog-filter button[type="submit"] {
+  margin-bottom: 20px;
   width: 160px;
   height: 48px;
   font-size: 16px;
@@ -789,6 +778,7 @@ button[type="reset"] {
   width: 160px;
   height: 18px;
   grid-column: 2/-1;
+  justify-self: end;
   margin: 0;
   padding: 9px 0;
   background: #F2F2F2;
