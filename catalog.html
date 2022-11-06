@@ -114,20 +114,30 @@
                   </li>
                 </ul>
               </fieldset>
+              
+              <!--добавить в разметку-->
               <fieldset class="filter-group">
-                <legend class="filter-group-title">Стоимость, ₽:</legend>
+                <legend class="filter-group-title title-price">Стоимость, ₽:</legend>
+                <div class="range">
+                <div class="range-wrapper-inputs">
                 <label class="catalog-filter-label" for="min-price">
-                  от <input class="catalog-filter-input" type="number" name="min-price" id="min-price">
+                  <input class="catalog-filter-input" type="number" name="min-price" id="min-price" value="0"> от
                 </label>
                 <label class="catalog-filter-label" for="max-price">
-                  <input class="catalog-filter-input" type="number" name="max-price" id="max-price"> до
+                  <input class="catalog-filter-input" type="number" name="max-price" id="max-price" value="9000"> до
                 </label>
-                <button class="range-toggle toggle-min" type="button">
+                </div>
+                  <div class="range-scale">
+                    <div class="range-bar" style="left: 0; width: 227px">
+                <button class="range-toggle toggle-min">
                   <span class="visually-hidden">Изменить минимальную цену</span>
                 </button>
-                <button class="range-toggle toggle-max" type="button">
+                <button class="range-toggle toggle-max">
                   <span class="visually-hidden">Изменить максимальную цену</span>
                 </button>
+                    </div>
+                  </div>
+                </div>
               </fieldset>
               <fieldset class="filter-group">
                 <button class="button" type="submit">Применить</button>
@@ -177,71 +187,63 @@
         <ol class="option-card-list">
           <li class="option-card-item">
             <h3 class="option-card-title">Amara Resort & Spa</h3>
-            <a class="option-card-image" href="#">
-              <img src="./image/amara-resort.jpg" width="300" height="206" alt="Гостиница Amara Resort">
-            </a>
+            <img class="option-card-image" src="./image/amara-resort.jpg" width="300" height="206" alt="Гостиница Amara Resort">
             <p class="option-card-description">
               <span>Гостиница</span>
               <span>От 4000 ₽</span>
             </p>
             <a class="button" href="#">Подробнее</a>
-            <button class="send" type="submit">В избранное</button>
+            <button type="submit">В избранное</button>
             <img src="./image/star-four.svg" width="91" height="17" alt="Гостиница 4 звезды">
             <p class="rating">Рейтинг: 8,5</p>
           </li>
           <li class="option-card-item">
             <h3 class="option-card-title">Desert Quail Inn</h3>
-            <a class="option-card-image" href="#">
-              <img src="./image/desert.jpg" width="300" height="206" alt="Гостиница Desert Quail Inn">
-            </a>
+            <img class="option-card-image" src="./image/desert.jpg" width="300" height="206" alt="Гостиница Desert Quail Inn">
             <p class="option-card-description">
               <span>Гостиница</span>
               <span>От 3000 ₽</span>
             </p>
             <a class="button" href="#">Подробнее</a>
-            <button class="send" type="submit">В избранное</button>
+            <button type="submit">В избранное</button>
             <img src="./image/star-three.svg" width="68" height="17" alt="Трехзвездочная гостиница">
             <p class="rating">Рейтинг: 8,9</p>
           </li>
           <li class="option-card-item">
             <h3 class="option-card-title">Villas at Poco Diablo</h3>
-            <a class="option-card-image" href="#">
-              <img src="./image/villas-at-poco.jpg" width="300" height="206" alt="Гостиница Villas at Poco Diablo">
-            </a>
+            <img class="option-card-image" src="./image/villas-at-poco.jpg" width="300" height="206" alt="Гостиница Villas at Poco Diablo">
             <p class="option-card-description">
               <span>Гостиница</span>
               <span>От 2000 ₽</span>
             </p>
             <a class="button" href="#">Подробнее</a>
-            <button class="selected" type="submit">В избранное</button>
+            <button type="submit">В избранное</button>
             <img src="./image/star-two.svg" width="43" height="17" alt="Двухзвездочная гостиница">
             <p class="rating">Рейтинг: 9,2</p>
           </li>
           <li class="option-card-item">
             <h3 class="option-card-title">GreenTree Inn</h3>
-            <a class="option-card-image" href="#">
-              <img src="./image/greentree.jpg" width="300" height="206" alt="Гостиница GreenTree Inn">
-            </a>
+            <img class="option-card-image" src="./image/greentree.jpg" width="300" height="206" alt="Гостиница GreenTree Inn">
             <p class="option-card-description">
               <span>Гостиница</span>
               <span>От 3000 ₽</span>
             </p>
             <a class="button" href="#">Подробнее</a>
-            <button class="send" type="submit">В избранное</button>
+            <button type="submit">В избранное</button>
             <img src="./image/star-two.svg" width="43" height="17" alt="Двухзвездочная гостиница">
             <p class="rating">Рейтинг: 9,2</p>
           </li>
         </ol>
       </div>
       <div class="option-card-button">
-        <a class="card-button send">Загрузить еще</a>
+        <button type="button">Загрузить еще</button>
       </div>
 
         <!--пагинация-->
       <div class="pagination-container">
         <ul class="pagination-list">
           <li class="pagination-item">
-            <a class="pagination-link pagination-link-active" href="">1</a>
+            <a class="pagination-link" href="">1</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="">2</a>
