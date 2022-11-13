@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="page" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>Sedona</title>
@@ -20,7 +20,7 @@
             <a class="navigation-link" href="#">О Седоне</a>
           </li>
           <li class="navigation-item">
-            <a class="navigation-link" aria-current="page">Гостиницы</a>
+            <a class="navigation-link navigation-link-current" aria-current="page">Гостиницы</a>
           </li>
         </ul>
         <ul class="navigation-users">
@@ -38,6 +38,7 @@
                 <path d="M9.44382 17C9.14296 17 8.84211 16.9 8.64155 16.6C3.22622 10.5 1.92253 9.1 1.62168 8.7C0.91969 7.8 0.518555 6.6 0.518555 5.4C0.518555 2.4 2.92537 0 6.03416 0C7.33785 0 8.54126 0.5 9.5441 1.3C10.5469 0.5 11.8506 0 13.054 0C16.0625 0 18.5696 2.4 18.5696 5.4C18.5696 6.7 18.0682 7.9 17.266 8.8L10.2461 16.7C10.0455 16.9 9.84495 17 9.44382 17ZM3.42679 7.5C3.72764 7.9 6.93672 11.5 9.5441 14.4L15.7617 7.4C16.2631 6.9 16.4637 6.2 16.4637 5.4C16.4637 3.6 14.9594 2.1 13.1543 2.1C12.1515 2.1 11.1486 2.6 10.4467 3.4C10.1458 3.7 9.84495 3.8 9.5441 3.8C9.24325 3.8 8.9424 3.6 8.74183 3.4C8.03984 2.6 7.037 2.1 6.03416 2.1C4.22906 2.1 2.7248 3.6 2.7248 5.4C2.62452 6.3 3.02565 7 3.42679 7.5C3.3265 7.5 3.3265 7.5 3.42679 7.5Z"/>
               </svg>
               <span class="visually-hidden">Понравилось</span>
+              <span class="amount-heart">12</span>
             </a>
           </li>
           <li class="navigation-user-item">
@@ -57,13 +58,12 @@
           <nav class="breadcrumbs">
             <ul class="breadcrumbs-list">
               <li class="breadcrumbs-item">
-                <a class="breadcrumbs-link" href="index.html">
+                <a class="breadcrumbs-link breadcrumbs-link-home" href="index.html">
                   <span class="visually-hidden">Главная</span>
-                  <img src="./image/main-page.svg" width="12" height="12" alt="На главную">
                 </a>
               </li>
               <li class="breadcrumbs-item">
-                <span>Каталог</span>
+                <a class="breadcrumbs-link" aria-current="page">Гостиницы</a>
               </li>
             </ul>
           </nav>
@@ -105,44 +105,46 @@
                 <ul class="filter-group-list">
                   <li class="filter-group-item">
                     <label class="control" for="hotel">
-                    <input class="visually-hidden control-input" type="radio" name="Гостиница" value="house-group" id="hotel" checked>
+                    <input class="visually-hidden control-input" type="radio" name="house" value="Гостиница" id="hotel" checked>
                     <span class="control-mark"></span>
                     <span class="control-label">Гостиница</span>
                   </label>
                   </li>
                   <li class="filter-group-item">
                     <label class="control" for="motel">
-                    <input class="visually-hidden control-input" type="radio" name="Мотель" value="house-group" id="motel">
+                    <input class="visually-hidden control-input" type="radio" name="house" value="Мотель" id="motel">
                     <span class="control-mark"></span>
                     <span class="control-label">Мотель</span>
                   </label>
                   </li>
                   <li class="filter-group-item">
                     <label class="control" for="apartments">
-                    <input class="visually-hidden control-input" type="radio" name="Апартаменты" value="house-group" id="apartments">
+                    <input class="visually-hidden control-input" type="radio" name="house" value="Апартаменты" id="apartments">
                     <span class="control-mark"></span>
                     <span class="control-label">Апартаменты</span>
                   </label>
                   </li>
                 </ul>
               </fieldset>
-              <fieldset class="filter-group">
+              <fieldset class="filter-group filter-group-price">
                 <legend class="filter-group-title title-price">Стоимость, ₽:</legend>
                 <div class="range">
                 <div class="range-wrapper-inputs">
                 <label class="catalog-filter-label" for="min-price">
-                  <input class="catalog-filter-input" type="number" name="min-price" id="min-price" value="0">
+                  <span class="range-title">от</span>
+                  <input class="catalog-filter-input" type="number" name="min-price" id="min-price" value="0" min="0" max="10000" step="100" placeholder="0">
                 </label>
                 <label class="catalog-filter-label" for="max-price">
-                  <input class="catalog-filter-input" type="number" name="max-price" id="max-price" value="9000"> до
+                  <span class="range-title">до</span>
+                  <input class="catalog-filter-input" type="number" name="max-price" id="max-price" value="9000" min="0" max="10000" step="100" placeholder="9000">
                 </label>
                 </div>
                   <div class="range-scale">
                     <div class="range-bar" style="left: 0; width: 227px">
-                <button class="range-toggle toggle-min">
+                <button class="range-toggle toggle-min" type="button">
                   <span class="visually-hidden">Изменить минимальную цену</span>
                 </button>
-                <button class="range-toggle toggle-max">
+                <button class="range-toggle toggle-max" type="button">
                   <span class="visually-hidden">Изменить максимальную цену</span>
                 </button>
                     </div>
@@ -173,19 +175,19 @@
         <div class="sorting-buttons">
           <a class="button-card" href="#">
             <svg aria-hidden="true" focusable="false" width="16" height="14" viewbox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#a)" fill="#000"><path d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v14H0z"/></clipPath></defs>
+              <g fill="#000"><path d="M4 0H0v6h4V0ZM16 0h-4v6h4V0ZM10 0H6v6h4V0ZM4 8H0v6h4V8ZM16 8h-4v6h4V8ZM10 8H6v6h4V8Z"/></g><defs><clipPath><path fill="#fff" d="M0 0h16v14H0z"/></clipPath></defs>
             </svg>
             <span class="visually-hidden">Показать карточки</span>
           </a>
           <a class="button-card" href="#">
             <svg aria-hidden="true" focusable="false" width="16" height="14" viewbox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#a)" fill="#000"><path d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v14H0z"/></clipPath></defs>
+              <g fill="#000"><path d="M16 12H0v2h16v-2ZM14 2v6H2V2h12Zm2-2H0v10h16V0Z"/></g><defs><clipPath><path fill="#fff" d="M0 0h16v14H0z"/></clipPath></defs>
           </svg>
             <span class="visually-hidden">Показать слайдами</span>
           </a>
           <a class="button-card" href="#">
             <svg aria-hidden="true" focusable="false" width="16" height="14" viewbox="0 0 16 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <g clip-path="url(#a)" fill="#000"><path d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z"/></g><defs><clipPath id="a"><path fill="#fff" d="M0 0h16v14H0z"/></clipPath></defs>
+              <g fill="#000"><path d="M2 0H0v2h2V0ZM16 0H4v2h12V0ZM2 4H0v2h2V4ZM16 4H4v2h12V4ZM2 8H0v2h2V8ZM16 8H4v2h12V8ZM2 12H0v2h2v-2ZM16 12H4v2h12v-2Z"/></g><defs><clipPath><path fill="#fff" d="M0 0h16v14H0z"/></clipPath></defs>
             </svg>
             <span class="visually-hidden">Показать список</span>
           </a>
@@ -197,7 +199,9 @@
         <ol class="option-card-list">
           <li class="option-card-item">
             <h3 class="option-card-title">Amara Resort & Spa</h3>
-            <img class="option-card-image" src="./image/amara-resort.jpg" width="300" height="206" alt="Гостиница Amara Resort">
+            <a class="option-card-image" href="#">
+              <img src="./image/amara-resort.jpg" width="300" height="206" alt="Гостиница Amara Resort">
+            </a>
             <p class="option-card-description">
               <span>Гостиница</span>
               <span>От 4000 ₽</span>
@@ -209,7 +213,9 @@
           </li>
           <li class="option-card-item">
             <h3 class="option-card-title">Desert Quail Inn</h3>
-            <img class="option-card-image" src="./image/desert.jpg" width="300" height="206" alt="Гостиница Desert Quail Inn">
+            <a class="option-card-image" href="#">
+              <img src="./image/desert.jpg" width="300" height="206" alt="Гостиница Desert Quail Inn">
+            </a>
             <p class="option-card-description">
               <span>Гостиница</span>
               <span>От 3000 ₽</span>
@@ -221,7 +227,9 @@
           </li>
           <li class="option-card-item">
             <h3 class="option-card-title">Villas at Poco Diablo</h3>
-            <img class="option-card-image" src="./image/villas-at-poco.jpg" width="300" height="206" alt="Гостиница Villas at Poco Diablo">
+            <a class="option-card-image" href="#">
+              <img src="./image/villas-at-poco.jpg" width="300" height="206" alt="Гостиница Villas at Poco Diablo">
+            </a>
             <p class="option-card-description">
               <span>Гостиница</span>
               <span>От 2000 ₽</span>
@@ -233,7 +241,9 @@
           </li>
           <li class="option-card-item">
             <h3 class="option-card-title">GreenTree Inn</h3>
-            <img class="option-card-image" src="./image/greentree.jpg" width="300" height="206" alt="Гостиница GreenTree Inn">
+            <a class="option-card-image" href="#">
+              <img src="./image/greentree.jpg" width="300" height="206" alt="Гостиница GreenTree Inn">
+            </a>
             <p class="option-card-description">
               <span>Гостиница</span>
               <span>От 3000 ₽</span>
@@ -253,7 +263,7 @@
       <div class="pagination-container">
         <ul class="pagination-list">
           <li class="pagination-item">
-            <a class="pagination-link-current" href="">1</a>
+            <a class="pagination-link-current" aria-current="page">1</a>
           </li>
           <li class="pagination-item">
             <a class="pagination-link" href="">2</a>
