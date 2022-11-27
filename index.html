@@ -65,51 +65,59 @@
 
         <!--Причины-->
         <section class="reasons">
-          <ul class="reason-list">
-            <li class="reason-item">
+          <ol class="reason-list">
+            <li class="reason-item reason-1">
               <div class="reason-container">
                 <h3 class="reason-title advantage-title">Настоящий городок</h3>
-                <span class="number-reason">— №1 —</span>
+                <span class="number-reason">№1</span>
                 <p class="reason-description">Седона — не аттракцион для туристов, там течёт своя жизнь</p>
               </div>
-              <img src="./image/Sedona-city.jpg" width="800" height="384" alt="Вид на улицу Седоны.">
+              <img src="./image/Sedona-city.jpg" width="800" height="384" alt="Архитектура Седоны">
+              <ul class="advantage-list">
+                <li class="advantage-item">
+                  <div class="house">
+                    <h4 class="reason-title advantage-subtitle">Жильё</h4>
+                    <p class="advantage-description">Рекомендуем пожить <br> в настоящем мотеле,<br> всё как в кино!</p>
+                  </div>
+                </li>
+                <li class="advantage-item">
+                  <div class="food">
+                    <h4 class="reason-title advantage-subtitle">Еда</h4>
+                    <p class="advantage-description">Всегда заказывайте <br> топовый фирменный бургер, <br> вы не разочаруетесь!</p>
+                  </div>
+                </li>
+                <li class="advantage-item">
+                  <div class="presents">
+                    <h4 class="reason-title advantage-subtitle">Сувениры</h4>
+                    <p class="advantage-description">Не только китайского, <br> но и настоящего местного <br> производства!</p>
+                  </div>
+                </li>
+              </ul>
             </li>
-            <li class="reason-item advantage-item">
-              <h4 class="reason-title house">Жильё</h4>
-              <p class="reason-description">Рекомендуем пожить <br> в настоящем мотеле, <br>всё как в кино!</p>
-            </li>
-            <li class="advantage-item">
-              <h4 class="reason-title food">Еда</h4>
-              <p class="reason-description">Всегда заказывайте <br>топовый фирменный бургер, <br> вы не разочаруетесь!</p>
-            </li>
-            <li class="reason-item advantage-item">
-              <h4 class="reason-title presents">Сувениры</h4>
-              <p class="reason-description">Не только китайского, <br>но и настоящего местного <br> производства!</p>
-            </li>
-            <li class="reason-item">
-              <img src="./image/bridge.jpg" width="800" height="384" alt="Мост дьявола среди скал и гор.">
+            <li class="reason-item reason-2">
+              <img src="./image/bridge.jpg" width="800" height="384" alt="Мост дьявола среди скал и гор">
               <div class="reason-container">
-                <h3 class="reason-title advantage-title">Там есть мост дьявола</h3>
-                <span class="number-reason">— №2 —</span>
+                <h3 class="reason-title advantage-title">Там есть <br> мост дьявола</h3>
+                <span class="number-reason">№2</span>
                 <p class="reason-description">Да, по нему можно пройти! Если вы осмелитесь, разумеется</p>
-              </div>
+            </div>
             </li>
             <li class="reason-item reason-wrapper">
-              <h3 class="reason-title">Небольшая площадь</h3>
-              <span class="number-reason">— №3 —</span>
-              <p class="reason-description">Все достопримечательности находятся очень близко</p>
+                <h3 class="reason-title">Небольшая площадь</h3>
+                <span class="number-reason">№3</span>
+                <p class="reason-description">Все достопримечательности находятся очень близко</p>
             </li>
             <li class="reason-item reason-wrapper">
-              <h3 class="reason-title">Красивая <br> дорога</h3>
-              <span class="number-reason">— №4 —</span>
-              <p class="reason-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
+                <h3 class="reason-title">Красивая <br> дорога</h3>
+                <span class="number-reason">№4</span>
+                <p class="reason-description">Ехать в Седону из Лас-Вегаса совсем не скучно!</p>
             </li>
             <li class="reason-item reason-wrapper">
-              <h3 class="reason-title">Мало <br> туристов</h3>
-              <span class="number-reason">— №5 —</span>
-              <p class="reason-description">Большинство едет в Гранд Каньон и толпится там</p>
+                <h3 class="reason-title">Мало <br> туристов</h3>
+                <span class="number-reason">№5</span>
+                <p class="reason-description">Большинство едет в Гранд Каньон и толпится там</p>
             </li>
-          </ul>
+          </ol>
         </section>
       </section>
 
@@ -118,7 +126,7 @@
         <h2 class="visually-hidden">Поиск гостиниц</h2>
         <div class="search-container">
           <p class="search-title">Заинтересовались?</p>
-          <p class="search-description">Укажите предполагаемые даты поездки, <br>и мы покажем вам лучшие предложения гостиниц в Седоне</p>
+          <p class="search-description">Укажите предполагаемые даты поездки, <br> и мы покажем вам лучшие предложения гостиниц в Седоне</p>
           <a class="search-button button-link page-link" href="#">Поиск гостиницы в Седоне</a>
         </div>
       </section>
@@ -200,9 +208,10 @@
             </div>
             <label class="modal-label" for="data-check-out">Дата выезда:</label>
             <div class="modal-input-container">
-              <input class="modal-input" type="text" name="data-check-in" value="1 сентября 2021" id="data-check-out" required>                                                                       <p class="modal-description">На эти даты есть свободные номера. Пока есть.</p>
+              <input class="modal-input" type="text" name="data-check-in" value="1 сентября 2021" id="data-check-out" required>
+              <p class="modal-description">На эти даты есть свободные номера. Пока есть.</p>
             </div>
-            <label class="modal-label modal-label-adult" for="amount-adult">Взрослые:</label>
+            <label class="modal-label" for="amount-adult">Взрослые:</label>
             <div class="container-amount">
               <button class="number-button-minus" type="button">
                 <span class="visually-hidden">Уменьшить количество</span>
